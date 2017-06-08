@@ -3,7 +3,7 @@
 module.exports = function(grunt) {
   'use strict';
   var lessPaths = [
-    './src/redturtle/patterns/slider/browser/static/pattern.less',
+    './src/redturtle/patterns/sliderstatic/pattern.less',
   ];
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
       'redturtle-pat': {
         options: {
           sourceMap: true,
-          sourceMapName: './src/redturtle/patterns/slider/browser/static/redturtle-patterns-slider-compiled.js.map',
+          sourceMapName: './src/redturtle/patterns/sliderstatic/redturtle-patterns-slider-compiled.js.map',
           sourceMapIncludeSources: false,
         },
         files: {
