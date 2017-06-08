@@ -3,7 +3,7 @@
 module.exports = function(grunt) {
   'use strict';
   var lessPaths = [
-    './src/redturtle/patterns/sliderstatic/pattern.less',
+    './src/redturtle/patterns/slider/static/pattern.less',
   ];
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -16,14 +16,13 @@ module.exports = function(grunt) {
           paths: {
             jquery: 'empty:',
             'pat-base': 'empty:',
-            'slick.min': '/Users/cekk/progetti/spazzatura/redturtle.patterns.slider/src/redturtle/patterns/libraries/slick/slick.min',
-            'redturtle-patterns-slider-bundle': '/src/redturtle/patterns/slider/static/',
-            // 'redturtle-patterns-slider': '/src/redturtle/patterns/slider/static/pattern',
-            'redturtle-patterns-slider': '/Users/cekk/progetti/spazzatura/redturtle.patterns.slider/src/redturtle/patterns/static/pattern'
+            'slick.min': '/Users/cekk/progetti/spazzatura/redturtle.patterns.slider/src/redturtle/patterns/slider/libraries/slick/slick.min',
+            // 'redturtle-patterns-slider-bundle': '/src/redturtle/patterns/slider/static/',
+            'redturtle-patterns-slider': '/Users/cekk/progetti/spazzatura/redturtle.patterns.slider/src/redturtle/patterns/slider/static/pattern'
           },
           // shim: {'less': {}, 'text': {}, },
           wrapShim: true,
-          name: '/Users/cekk/progetti/spazzatura/redturtle.patterns.slider/src/redturtle/patterns/static/bundle.js',
+          name: '/Users/cekk/progetti/spazzatura/redturtle.patterns.slider/src/redturtle/patterns/slider/static/bundle.js',
           exclude: ['jquery'],
           out: '/Users/cekk/progetti/spazzatura/redturtle.patterns.slider/src/redturtle/patterns/slider/static/redturtle-patterns-slider-bundle-compiled.js',
           optimize: 'none',
@@ -31,14 +30,14 @@ module.exports = function(grunt) {
       },
     },
     uglify: {
-      'redturtle-pat': {
+      'redturtle-patterns-slider': {
         options: {
           sourceMap: true,
-          sourceMapName: './src/redturtle/patterns/sliderstatic/redturtle-patterns-slider-compiled.js.map',
+          sourceMapName: './src/redturtle/patterns/slider/static/redturtle-patterns-slider-bundle-compiled.js.map',
           sourceMapIncludeSources: false,
         },
         files: {
-          './src/redturtle/patterns/slider/static/redturtle-patterns-slider-compiled.js': ['./src/redturtle/patterns/slider/static/redturtle-patterns-slider-bundle-compiled.js'],
+          './src/redturtle/patterns/slider/static/redturtle-patterns-slider-bundle-compiled.js': ['./src/redturtle/patterns/slider/static/redturtle-patterns-slider-bundle-compiled.js'],
         },
       },
     },
