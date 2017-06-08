@@ -35,11 +35,11 @@
   <plone:static
       directory="static"
       type="plone"
-      name="redturtle-patterns"
+      name="redturtle-patterns-slider"
       />
 
   <browser:resourceDirectory
-      name="redturtle-patterns-libraries"
+      name="redturtle-patterns-slider-libraries"
       directory="libraries"
       />
 

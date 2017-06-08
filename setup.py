@@ -33,7 +33,7 @@ setup(
     url='https://pypi.python.org/pypi/redturtle.patterns.slider',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
-    namespace_packages=['redturtle', 'redturtle.patterns.slider'],
+    namespace_packages=['redturtle', 'redturtle.patterns'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,

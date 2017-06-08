@@ -3,36 +3,36 @@
   <!-- PATTERNS -->
   <records prefix="plone.resources/redturtle-patterns-slider"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-      <value key="js">++plone++redturtle-patterns/slider/pattern.js</value>
+      <value key="js">++plone++redturtle-patterns-slider/slider/pattern.js</value>
       <value key="css">
-        <element>++plone++redturtle-patterns/slider/pattern.slider.less</element>
+        <element>++plone++redturtle-patterns-slider/slider/pattern.slider.less</element>
       </value>
   </records>
 
   <!-- EXTERNAL LIBRARIES -->
   <records prefix="plone.resources/slick.min"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-            <value key="js">++resource++redturtle-patterns-libraries/slick/slick.min.js</value>
+            <value key="js">++resource++redturtle-patterns-slider-libraries/slick/slick.min.js</value>
   </records>
 
   <!-- BUNDLE REGISTRATION AS RESOURCE -->
   <records prefix="plone.resources/redturtle-patterns-slider-bundle"
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="js">++plone++redturtle-patterns/bundle.js</value>
+    <value key="js">++plone++redturtle-patterns-slider/bundle.js</value>
     <value key="css">
-      <element>++plone++redturtle-patterns/pattern.less</element>
+      <element>++plone++redturtle-patterns-slider/pattern.less</element>
     </value>
   </records>
 
   <!-- BUNDLE -->
-  <records prefix="plone.bundles/redturtle-patterns"
+  <records prefix="plone.bundles/redturtle-patterns-slider"
             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="resources">
-      <element>bundle-redturtle-patterns</element>
+      <element>bundle-redturtle-patterns-slider</element>
     </value>
     <value key="enabled">True</value>
-    <value key="jscompilation">++plone++redturtle-patterns/redturtle-patterns-compiled.min.js</value>
-    <value key="csscompilation">++plone++redturtle-patterns/redturtle-patterns-compiled.css</value>
+    <value key="jscompilation">++plone++redturtle-patterns-slider/redturtle-patterns-slider-compiled.min.js</value>
+    <value key="csscompilation">++plone++redturtle-patterns-slider/redturtle-patterns-slider-compiled.css</value>
     <value key="last_compilation">2015-02-16 00:00:00</value>
     <value key="depends">plone</value>
     <value key="stub_js_modules">

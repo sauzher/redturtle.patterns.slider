@@ -1,6 +1,2 @@
 # -*- coding: utf-8 -*-
-"""Init and utils."""
-
-from zope.i18nmessageid import MessageFactory
-
-_ = MessageFactory('redturtle.patterns.slider')
+__import__('pkg_resources').declare_namespace(__name__)
