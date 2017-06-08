@@ -1,0 +1,6 @@
+include *.rst
+recursive-include src *
+graft docs
+exclude .bowerrc
+exclude Makefile
+global-exclude *.pyc
