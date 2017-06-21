@@ -5,7 +5,7 @@
             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
       <value key="js">++plone++redturtle-patterns-slider/pattern.js</value>
       <value key="css">
-        <element>++plone++redturtle-patterns-slider/pattern.slider.css</element>
+        <element>++plone++redturtle-patterns-slider/pattern.css</element>
       </value>
   </records>
 

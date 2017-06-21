@@ -5,10 +5,20 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   var productRoot = 'src/redturtle/patterns/slider';
   grunt.initConfig({
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'expanded',
+        },
+        files: {                         // Dictionary of files
+          './src/redturtle/patterns/slider/static/pattern.css': `${productRoot}/static/pattern.scss`,
+        },
+      },
+    },
     cssmin: {
       target: {
         files: {
-          './src/redturtle/patterns/slider/static/build/redturtle-patterns-slider-bundle-compiled.min.css': [`${productRoot}/libraries/slick/slick.css`],
+          './src/redturtle/patterns/slider/static/build/redturtle-patterns-slider-bundle-compiled.min.css': [`${productRoot}/libraries/slick/slick.css`, `${productRoot}/static/pattern.css`],
         },
       },
       options: {
@@ -16,14 +26,14 @@ module.exports = function (grunt) {
       },
     },
     requirejs: {
-      'tiles-management-bundle': {
+      'redturtle-patterns-slider': {
         options: {
           baseUrl: './',
           generateSourceMaps: true,
           preserveLicenseComments: false,
           paths: {
             jquery: 'empty:',
-            'pat-base': 'empty:',
+            'mockup-patterns-base': 'empty:',
             'slick.min': `${productRoot}/libraries/slick/slick.min`,
             'redturtle-patterns-slider': `${productRoot}/static/pattern`
           },
@@ -47,6 +57,22 @@ module.exports = function (grunt) {
         },
       },
     },
+    watch: {
+      scripts: {
+        files: [`${productRoot}/static/pattern.js`, `${productRoot}/static/bundle.js`],
+        tasks: ['requirejs', 'uglify'],
+        options: {
+          livereload: true,
+        },
+      },
+      css: {
+        files: `${productRoot}/static/pattern.scss`,
+        tasks: ['sass', 'cssmin'],
+        options: {
+          livereload: true,
+        },
+      },
+    },
 
     // sed: {
     //   version: {
@@ -59,6 +85,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('compile', ['cssmin', 'requirejs', 'uglify']);
+  grunt.registerTask('compile', ['sass', 'cssmin', 'requirejs', 'uglify']);
 
 };

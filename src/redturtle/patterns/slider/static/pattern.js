@@ -10,14 +10,14 @@ define('redturtle-patterns-slider', [
     parser: 'mockup',
     defaults: {
       dots: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: true,
+      lazyLoad: 'ondemand',
     },
     init: function () {
-      console.log('ciao!');
-      var that = this;
-      that.$el.slick(that.defaults);
+      var _this = this;
+      _this.$el.slick(_this.defaults);
     },
   });
 
