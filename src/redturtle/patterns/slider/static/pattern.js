@@ -17,7 +17,7 @@ define('redturtle-patterns-slider', [
     },
     init: function () {
       var _this = this;
-      _this.$el.slick(_this.defaults);
+      _this.$el.slick(_this.options);
     },
   });
 
