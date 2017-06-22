@@ -73,16 +73,28 @@ If you want to change something, you only need to add an additional configuratio
   </div>
 
 
-Development build chain
------------------------
+  JS Development and bundling
+  ---------------------------
 
-This is a pattern registered in resource registry, so if you made some changes,
-the bundle needs to be recompiled.
+  If you need to develop this product's javascripts or styles, you need to compile the code
+  for the resource registry bundle. To do this, there are two grunt tasks.
 
-There are two grunt commands availables in the product's root:
+  First of all, you need to install grunt dependencies listed in package.json file in the root of this package:
 
-- `grunt`: starts a grunt-watch task and re-compile automatically the resources
-- `grunt compile`: compile all the resources of the bundle on demand
+  .. code::
+
+    npm install
+
+  or if you prefer yarn:
+
+  .. code::
+    yarn
+
+  After that, you can use two different grunt tasks:
+
+  - `grunt`: the default task, that listen files changes with `watch` and re-build resources and bundles automatically
+  - `grunt compile`: to manually compile all resources and bundles
+
 
 Contribute
 ----------

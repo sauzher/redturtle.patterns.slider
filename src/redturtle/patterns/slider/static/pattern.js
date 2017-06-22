@@ -1,6 +1,6 @@
 define('redturtle-patterns-slider', [
   'jquery',
-  'mockup-patterns-base',
+  'pat-base',
   'slick.min',
 ], function ($, Base) {
   'use strict';

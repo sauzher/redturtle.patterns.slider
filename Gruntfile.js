@@ -33,7 +33,7 @@ module.exports = function (grunt) {
           preserveLicenseComments: false,
           paths: {
             jquery: 'empty:',
-            'mockup-patterns-base': 'empty:',
+            'pat-base': 'empty:',
             'slick.min': `${productRoot}/libraries/slick/slick.min`,
             'redturtle-patterns-slider': `${productRoot}/static/pattern`
           },
