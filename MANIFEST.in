@@ -4,3 +4,5 @@ graft docs
 exclude .bowerrc
 exclude Makefile
 global-exclude *.pyc
+exclude .nvmrc
+exclude Gruntfile.js
