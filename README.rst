@@ -73,10 +73,6 @@ First of all, you need to install grunt dependencies listed in package.json file
 
   npm install
 
-or if you prefer yarn:
-
-.. code::
-  yarn
 
 After that, you can use two different grunt tasks:
 
