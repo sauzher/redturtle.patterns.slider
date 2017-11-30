@@ -8,18 +8,7 @@ redturtle.patterns.slider
 
 A pattern based on Plone Mockup that enable a slick slider on a selected div.
 
-Features
---------
-
-- TODO
-
-
-Examples
---------
-
-This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
-
+http://kenwheeler.github.io/slick/
 
 Documentation
 -------------
@@ -72,28 +61,27 @@ If you want to change something, you only need to add an additional configuratio
   ...
   </div>
 
+JS Development and bundling
+---------------------------
 
-  JS Development and bundling
-  ---------------------------
+If you need to develop this product's javascripts or styles, you need to compile the code
+for the resource registry bundle. To do this, there are two grunt tasks.
 
-  If you need to develop this product's javascripts or styles, you need to compile the code
-  for the resource registry bundle. To do this, there are two grunt tasks.
+First of all, you need to install grunt dependencies listed in package.json file in the root of this package:
 
-  First of all, you need to install grunt dependencies listed in package.json file in the root of this package:
+.. code::
 
-  .. code::
+  npm install
 
-    npm install
+or if you prefer yarn:
 
-  or if you prefer yarn:
+.. code::
+  yarn
 
-  .. code::
-    yarn
+After that, you can use two different grunt tasks:
 
-  After that, you can use two different grunt tasks:
-
-  - `grunt`: the default task, that listen files changes with `watch` and re-build resources and bundles automatically
-  - `grunt compile`: to manually compile all resources and bundles
+- `grunt`: the default task, that listen files changes with `watch` and re-build resources and bundles automatically
+- `grunt compile`: to manually compile all resources and bundles
 
 
 Contribute
@@ -101,13 +89,6 @@ Contribute
 
 - Issue Tracker: https://github.com/RedTurtle/redturtle.patterns.slider/issues
 - Source Code: https://github.com/RedTurtle/redturtle.patterns.slider
-
-
-Support
--------
-
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
 
 
 License
