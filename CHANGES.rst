@@ -5,8 +5,8 @@ Changelog
 0.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Published on pypi
+  [cekk]
 
 0.1.1 (2017-12-21)
 ------------------
