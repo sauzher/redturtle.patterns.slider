@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-0.1.2 (unreleased)
+0.1.2 (2018-06-11)
 ------------------
 
 - Published on pypi
