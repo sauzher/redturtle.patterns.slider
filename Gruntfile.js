@@ -3,12 +3,15 @@ module.exports = function (grunt) {
   'use strict';
 
   require('load-grunt-tasks')(grunt);
+  const sass = require('node-sass');
   var productRoot = 'src/redturtle/patterns/slider';
   grunt.initConfig({
     sass: {                              // Task
       dist: {                            // Target
-        options: {                       // Target options
-          style: 'expanded',
+        options: {
+          implementation: sass,                       // Target options
+          outputStyle: 'expanded',
+          sourceMap: true
         },
         files: {                         // Dictionary of files
           './src/redturtle/patterns/slider/static/pattern.css': `${productRoot}/static/pattern.scss`,
